@@ -27,13 +27,12 @@ var seattle= {
 
 };
 //amount of cookies sold
-seattle.generateSales();{
-  //var totalSales=//cookies sold per hr. x hours
-  //for (var i=0; i<13;i++){
-    //totalSales += this.hourlyCookieSales[i];
-  ///}
+seattle.generateSales(city);{
+  for (var i=0; i<hours.length;i++){
+    var avgcookies=Math.ceil(city.generateSales()*city.avgcustomer)
+    city.sales[i]=hours[i]+avgCookies+'cookies';
+  }
 }
-
 //function displayStores(location){
   //var storeData=location.sales;
  // var parentElement=document.getElementByld('location');
@@ -52,3 +51,20 @@ seattle.generateSales();{
 ////////////////////////////////////lab7
 
 
+//add table 
+addElement('th',headerRowElem,'6:00am');
+addElement('th',headerRowElem,'7:00am');
+//....7pm
+
+var article=addElement('article',container);
+addElement('h2',article,this.name);
+
+var tableElem = addElement('table',article);
+
+var headerRowElem=addElement('tr',tableElem);
+
+var dataRowElem=addElement('tr',tableElem);
+
+addElement('td',dataRowElem,(city).6:00am);
+addElement('td',dataRowElem,(city).7:00am);
+//....7pm
