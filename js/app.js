@@ -1,37 +1,54 @@
 'use strict';
-var hours= [6,7,8,9,10,11,12,1,2,3,4,5,6,7]
+//global variables
 
-var seattle = {
+var hours= ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
+
+
+var seattle= {
   name: 'seattle',
   minCust: 23,
   maxCust: 65,
-  avgCookieSold: 6.3,
-  sales:[]
-  getSales:function(){
-    var rando= Math.rando();{
-      console.log('rando',rando)
+  avgCookiesSold: 6.3,
+  sales:[],
+  //amount of cookies purchased per hr. 
+  generateSales: function(){
+    for(var i= 0; i<hours.length;i++){
+      var hourlyCookieSales= this.avgHourlySales();
+      this.sales.push(hourlyCookieSales);
+
     }
-    var range= this.maxcust-this.minCust
-    console.log('range',range)
+    console.log(this.sales);
+  },
+  //random customers per hour
+  avgHourlySales: function(){
+    return Math.round(Math.random()*(this.maxCust-this.minCust)) + this.minCust;
 
-    var randoCust=this.mincust+Math.floor(rando*range)+1
-    var estiCookiesSold=Math.ceil(randoCust);
-    console.log('estCookiesSold',estiCookiesSold);
-    return estiCookiesSold
   }
+
+};
+//amount of cookies sold
+seattle.generateSales();{
+  //var totalSales=//cookies sold per hr. x hours
+  //for (var i=0; i<13;i++){
+    //totalSales += this.hourlyCookieSales[i];
+  ///}
 }
 
-function displayStores(location){
-  var storeData=location.sales;
-  var parentElement=document.getElementByld('location');
-  var ul=document.createElement('ul');
-  parentElement.appendChild(ul);
-  ul.textContent=location.name;
-  for (var i=0;i<storeData.lenght;i++){
-    var li=document.createElement('li');
-    var lisItem=location.sales
-    ul.appendChild(li);
-    li.textContent=location.sales[i];
-  }
-}
+//function displayStores(location){
+  //var storeData=location.sales;
+ // var parentElement=document.getElementByld('location');
+ // var ul=document.createElement('ul');
+ // parentElement.appendChild(ul);
+  //ul.textContent=location.name;
+ // for (var i=0;i<storeData.lenght;i++){
+   // var li=document.createElement('li');
+   // var lisItem=location.sales
+   // ul.appendChild(li);
+    //li.textContent=location.sales[i];
+ // }
+//}
+////////////////////////////////////////////fixing lab6
+
+////////////////////////////////////lab7
+
 
