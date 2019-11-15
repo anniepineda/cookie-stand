@@ -29,6 +29,7 @@ var dubai = new Store('Dubai',11,38,3.7);
 var paris = new Store('Paris',20,38,2.3);
 var lima = new Store('Lima',2,16,4.6);
 
+
 console.log('seattle:', seattle);
 
 function addElement(tag,container,text){
@@ -39,26 +40,27 @@ function addElement(tag,container,text){
 }
 
 
-function displayStores(city) {
-  var sales = document.getElementById('sales');
-  addElement('h2', sales, city.name);
-  var ulElem = addElement('ul', sales);
-  for (var i=0; i < hours.length; i++) {
-    addElement('li', ulElem, hours[i] + ' ' + city.cookiesPerHour[i] + ' cookies');
-  }
-  addElement('li', ulElem, 'Total '+ city.totalSoldDaily+ ' cookies' );
-}
+// function displayStores(city) {
+//   var sales = document.getElementById('sales');
+//   addElement('h2', sales, city.name);
+//   var ulElem = addElement('ul', sales);
+//   for (var i=0; i < hours.length; i++) {
+//     addElement('li', ulElem, hours[i] + ' ' + city.cookiesPerHour[i] + ' cookies');
+//   }
+//   addElement('li', ulElem, 'Total '+ city.totalSoldDaily+ ' cookies' );
+// }
 
-displayStores(seattle);
-displayStores(tokyo);
-displayStores(dubai);
-displayStores(paris);
-displayStores(lima);
+// displayStores(seattle);
+// displayStores(tokyo);
+// displayStores(dubai);
+// displayStores(paris);
+// displayStores(lima);
 
 
 //lab07
 var tableContainer = document.getElementById('tableContainer');
 var tableElem = addElement('table',tableContainer);
+
 var trElem = addElement('tr',tableElem);
 addElement('th',trElem,' ');
 for (var i = 0; i < hours.length; i++){
@@ -66,10 +68,6 @@ for (var i = 0; i < hours.length; i++){
 }
 addElement('th',trElem,'Daily Location Total');
 
-// var dataRow = addElement('tr',tableElem);
-// addElement('td',dataRow,seattle.name);
-// for (var s=0; s<hours.length; s++){
-//   addElement('td',dataRow,seattle.cookiesPerHour[s]);
 
 //body of table
 function getCityData(city){
