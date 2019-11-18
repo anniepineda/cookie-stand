@@ -33,3 +33,8 @@ hr {
     border: 0;
     box-shadow: inset 0 12px 12px -12px rgba(250,128,114,0.5);
 }
+p {
+    text-align: center;
+    font-family: 'Cutive', serif;
+    color: salmon;
+}
