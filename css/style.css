@@ -1,4 +1,10 @@
-
+body {
+    background-image: url("http://www.allwhitebackground.com/images/2/2274.jpg");
+    background-size: 100% 100%;
+    background-repeat: repeat;
+    background-position: center;
+   
+}
 
 
 table, th, td {
@@ -13,8 +19,17 @@ h1 {
     color: salmon;
     text-align: center;
     font-size: 60px;
+    font-family: 'Cutive', serif;
+    margin: 0%;
 }
 
 img {
-    margin: 3px 95px;
+    margin: 0% 25%;
+    width: 55%
+}
+
+hr {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(250,128,114,0.5);
 }
